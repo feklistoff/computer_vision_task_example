@@ -73,7 +73,7 @@ python src/train.py --data_dir data --batch_size 4 --num_epochs 20 --lr 0.0005 -
 - `--lr`: Learning rate.
 - `--device`: Device to run training on (cuda, mps, or cpu).
 
-### 3. **valuate the Model**
+### 3. **Evaluate the Model**
 
 Evaluate the trained model on the validation dataset.
 
