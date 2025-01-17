@@ -1,0 +1,15 @@
+jupyter==1.1.1
+matplotlib==3.9.4
+pandas==2.2.3
+torch==2.5.1
+torchvision==0.20.1
+pytorch-lightning==2.5.0.post0
+opencv-python==4.11.0.86
+opencv-contrib-python==4.11.0.86
+opencv-python-headless==4.11.0.86
+torchmetrics==1.6.1
+tensorboard==2.18.0
+pycocotools==2.0.8
+albumentations==2.0.0
+black==24.10.0
+jupyter-black==0.4.0
