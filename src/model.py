@@ -62,7 +62,6 @@ class DetectionLightningModule(pl.LightningModule):
 
     def training_step(self, batch, batch_idx):
         images, targets = batch
-        targets = [{k: v for k, v in t.items()} for t in targets]
         # Fasterrcnn takes both images and targets for training
         loss_dict = self.model(images, targets)
         loss = sum(loss_dict.values())
@@ -73,7 +72,6 @@ class DetectionLightningModule(pl.LightningModule):
 
     def validation_step(self, batch, batch_idx):
         images, targets = batch
-        targets = [{k: v for k, v in t.items()} for t in targets]
         # Forward pass
         # Fasterrcnn takes only images for eval() mode
         preds = self.model(images)
