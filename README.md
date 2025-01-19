@@ -87,10 +87,16 @@ python src/train.py --device cpu --evaluate --model_path model/fasterrcnn_final.
 
 ### 4. **Check Inference**
 
-Use the trained model to run inference on new images.
+Use the trained model to run inference on new images. For the training we used synthetic data, so it is a great idea to check inference using the real world data.
 
 ```bash
 python src/inference.py --image artifacts/test/test.png --model_path model/fasterrcnn_final.pth --device cpu --inference_thresh 0.2
+```
+
+Or we can use any image from the generated data
+
+```bash
+python src/inference.py --image data/synth_data/some_image.png --model_path model/fasterrcnn_final.pth --device cpu --inference_thresh 0.2
 ```
 
 - `--image`: Path to the input image.
